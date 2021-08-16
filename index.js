@@ -1,17 +1,15 @@
 const diceOne = document.getElementById("playerOne");
 const diceTwo = document.getElementById("playerTwo");
-let scoreOne = 0;
-let scoreTwo = 0;
 
 function rollDice() {
   let rndNumOne = Math.floor(Math.random() * 6);
   let rndNumTwo = Math.floor(Math.random() * 6);
 
-  changeDiceImage(diceOne, rndNumOne);
-  changeDiceImage(diceTwo, rndNumTwo);
-
   document.getElementById("score-one").innerHTML = rndNumOne + 1;
   document.getElementById("score-two").innerHTML = rndNumTwo + 1;
+
+  changeDiceImage(diceOne, rndNumOne);
+  changeDiceImage(diceTwo, rndNumTwo);
 
   if (rndNumOne > rndNumTwo) {
     document.getElementById("welcome-text").innerHTML = "Player One Wins!";
