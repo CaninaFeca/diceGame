@@ -6,7 +6,7 @@ body {
 
 #welcome-text {
   padding-top: 7%;
-  padding-bottom: 7%;
+  padding-bottom: 5%;
 }
 
 .score {
@@ -14,10 +14,12 @@ body {
 }
 
 .dice {
-  padding: 5% 12%;
+  padding: 5% 5%;
+  width: 60%;
 }
 
 .btn {
   border-radius: 0px;
   margin-bottom: 10%;
+  margin-top: 5%;
 }

@@ -2,6 +2,10 @@ const diceOne = document.getElementById("playerOne");
 const diceTwo = document.getElementById("playerTwo");
 
 function rollDice() {
+  document.getElementById("playerOne").style.backgroundColor = "#5c527f";
+  document.getElementById("playerTwo").style.backgroundColor = "#5c527f";
+  document.getElementById("playerTwoScore").style.backgroundColor = "#5c527f";
+  document.getElementById("playerOneScore").style.backgroundColor = "#5c527f";
   let rndNumOne = Math.floor(Math.random() * 6);
   let rndNumTwo = Math.floor(Math.random() * 6);
 
@@ -13,8 +17,14 @@ function rollDice() {
 
   if (rndNumOne > rndNumTwo) {
     document.getElementById("welcome-text").innerHTML = "Player One Wins!";
+    document.getElementById("playerOneScore").style.backgroundColor = "#514481";
+    document.getElementById("playerOne").style.backgroundColor = "#514481";
   } else if (rndNumTwo > rndNumOne) {
     document.getElementById("welcome-text").innerHTML = "Player Two Wins!";
+    document.getElementById("playerTwoScore").style.backgroundColor = "#514481";
+    document.getElementById("playerTwo").style.backgroundColor = "#514481";
+  } else {
+    document.getElementById("welcome-text").innerHTML = "Draw!";
   }
 }
 
